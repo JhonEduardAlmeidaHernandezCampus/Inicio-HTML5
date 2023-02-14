@@ -6,31 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio HTML5</title>
 
+    <!-- https://tutorialehtml.com/es/tutoriales-html-parrafos/ -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="centro">
             <h3>La etiqueta para un párrafo es "p".</h3>
-            <p>El párrafo es un elemento base en la edición de texto. 
-            La etiqueta para un párrafo es <em>p</em>.</p>
-            <p>Este atributo ubica un espacio vacío encima y debajo del texto para hacerlo evidente,
-            así el buscador podrá reconocerlo como es.</p>
-            <br>
+            <p>La etiqueta "table" se usa para abrir una tabla. 
+                Dentro de esta etiqueta encontraremos otras dos etiquetas típicas, 
+                "tr" (lineas de la tabla) y "td" (columnas de la tabla).</p>
+            <br><br>
 
-            <h3>HTML - Párrafo justifido</h3>
-            <p align="justify">Este atributo ubica un espacio vació encima y debajo del texto para hacerlo evidente, 
-            así el buscador podrá reconocerlo como es.</p>
-            <br>
+            <table border="1">
+                <tr>
+                    <td>Fila 1 Celda 1</td>
+                    <td>Fila 1 Celda 2</td>
+                </tr>
+                <tr>
+                    <td>Fila 2 Celda 1</td>
+                    <td>Fila 2 Celda 2</td>
+                </tr>
+            </table> 
 
-            <h3>HTML - Párrafo centrado</h3>
-            <p align="center">Este atributo ubica un espacio vacío encima y <br />
-            debajo del texto para hacerlo evidente, así el buscador podrá reconocerlo como es.</p>
-            <br>
+            <br><br>
 
-            <h3>HTML - Párrafo a la derecha</h3>
-            <p align="right">Este atributo deja un espacio vacío encima y debajo del texto para <br />evidenciarlo, 
-                así tanto el navegador como el usuario lo podrá distinguir como tal.</p>
+            <h3>Tablas asimétricas</h3>
 
+            <p>Para formar tablas asimétricas usaremos 'rospawn' para unir más de una linea, y 'colspan' para unir más de una columna. <br>
+                Ademas, si queremos que la primera linea sirva como linea de título para las columnas usaremos la etiqueta "th". <br>
+                Estas serán escritas con letras en negrilla</p>
+
+            <table border="1">
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Fila 1 Celda 1</td>
+                    <td>Row 1 Cell 2</td>
+                    <td>Fila 1 Celda 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2 Cell 2</td>
+                    <td>Linea 2 Celda 3</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Linea 3 Celda 1</td>
+                </tr>
+            </table>
+            <br><br>
+
+            <h3>Espacio entre las celdas</h3>
+            <p>Con la ayuda de los atributos 'cellpadding' y 'cellspacing' podemos establecer la distancia entre la celdas. <br>
+                cellspacing determina el tamaño del borde, y cellspadding la distancia entre el marco y el contenido.</p>
+
+                <table border="1" cellspacing="10" bgcolor="rgb(0,200,0)">
+                    <tr>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                    </tr>
+                    <tr>
+                        <td>Fila 1 Celda 1</td>
+                        <td>Fila 1 Celda 2</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2 Celda 1</td>
+                        <td>Fila 2 Celda 2</td>
+                    </tr>
+                </table>
     </div>
 </body>
 </html>
