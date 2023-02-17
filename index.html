@@ -16,46 +16,529 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="centro">
-        <h1>Etiquetas de listas </h1>
+    <div>
+        <h1>Propiedades de tablas HTML</h1>
 
-        <h2>Lista ordenada</h2>
-        <p>Usa la etiqueta ol para construir lista lista ordenada. <br>
-            Para señalizar al navegador los elementos de una lista tienes que usar la etiqueta li dentro de ol.</p>
-        
-        <h4 align="center">Objetivos</h4>
+        <p>
+            las tablas son construidas utilizando elementos. <br>
+            En particular, una tabla básica puede ser declarada usando tres elementos:
+        </p>
+        <p>
+            <strong>table</strong> (el contenedor principal)
+        </p>
+        <p>
+           <strong>tr</strong> (representando a las filas contenedoras de las celdas) 
+        </p>
+        <p>
+            <strong>td</strong> (representando a las celdas). 
+        </p>
 
-        <ol>
-            <li>Encontrar un trabajo</li>
-            <li>Ganar mucho dinero</li>
-            <li>Cambiarse de ciudad</li>
-        </ol>
-           
-        <h2>Lista no ordenadas</h2>
+        <h4>
+            Ejemplo:
+        </h4>
 
-        <p> Para construir una lista no ordenada usamos la etiqueta ul. <br>
-            Las listas no ordenadas son de diferentes tipos: Casillas, puntos, y círculos. <br>
-            El valor estándar en la mayoría de los navegadores son los puntos o bullets.</p>
+        <table class="default">
 
-            <ul> 
-                <li>leche</li>
-                <li>queso</li>
-                <li>huevos</li>
-                <li>azúcar</li>
-            </ul>
+            <tr>
+          
+              <td>Celda 1</td>
+          
+              <td>Celda 2</td>
+          
+              <td>Celda 3</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <td>Celda 4</td>
+          
+              <td>Celda 5</td>
+          
+              <td>Celda 6</td>
+          
+            </tr>
+          
+        </table>
 
-        <h2>Lista de definición</h2>
-        <p> También puedes hacer listas de definición utilizando la etiqueta dl. <br>
-            Esta lista dará la definición a la palabra especificada. <br>
-            Para que la palabra sea mas evidente y que se distinga bien de la descripción se suele poner también en negrita.</p>
+        <p>--------------------------------------------------------------------------------------------------------------</p>
+    
 
-            <dl>
-                <dt><strong>Cheese</strong></dt> 
-                <dd>Palabra en inglés para queso</dd>
-                
-                <dt><strong>Computer</strong></dt>
-                <dd>Palabra en inglés para ordenador</dd>
-            </dl>
+        <h1>Celdas con encabezado</h1>
+
+        <p>
+        <strong>th</strong> Es un tipo de celda de encabezado utilizada para organizar y categorizar otras celdas en la tabla.
+        </p>
+
+        <table class="default">
+
+            <tr>
+          
+              <th>Hoy</th>
+          
+              <th>Mañana</th>
+          
+              <th>Domingo</th>
+          
+            </tr>
+          
+            <tr>
+          
+              <td>Soleado</td>
+          
+              <td>Mayormente soleado</td>
+          
+              <td>Parcialmente nublado</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <td>19°C</td>
+          
+              <td>17°C</td>
+          
+              <td>12°C</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <td>E 13 km/h</td>
+          
+              <td>E 11 km/h</td>
+          
+              <td>S 16 km/h</td>
+          
+            </tr>
+          
+        </table>
+
+        <p>--------------------------------------------------------------------------------------------------------------</p>
+
+        <h1>Atributo Scope</h1>
+
+        <p>
+            <strong>scope</strong> provee un mecanismo para indicar explícitamente a qué celdas afecta una celda de encabezado. <br>
+            Este atributo solo puede ser declarado en una celda de encabezado y tomar los valores "col", "row", "colgroup" y "rowgroup".
+        </p>
+
+        <table class="default">
+
+            <tr>
+          
+              <th scope="row">Día</th>
+          
+              <th>Hoy</th>
+          
+              <th>Mañana</th>
+          
+              <th>Domingo</th>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Condición</th>
+          
+              <td>Soleado</td>
+          
+              <td>Mayormente soleado</td>
+          
+              <td>Parcialmente nublado</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Temperatura</th>
+          
+              <td>19°C</td>
+          
+              <td>17°C</td>
+          
+              <td>12°C</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Vientos</th>
+          
+              <td>E 13 km/h</td>
+          
+              <td>E 11 km/h</td>
+          
+              <td>S 16 km/h</td>
+          
+            </tr>
+          
+        </table>
+
+        <p>--------------------------------------------------------------------------------------------------------------</p>
+
+        <h1>Titulo de una tabla</h1>
+
+        <p>
+            <strong>caption</strong> provee una descripción concisa acerca de la información presentada en la tabla o su propósito, <br>
+            aportando contexto y haciéndola significativamente más fácil de comprender.  
+        </p>
+
+        <table class="default">
+
+            <caption>Consumo de combustible de los autos a lo largo de las pruebas de manejo</caption>
+          
+            <tr>
+          
+              <th scope="col">Car</th>
+          
+              <th>Enero</th>
+          
+              <th>Febrero</th>
+          
+              <th>Marzo</th>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Chevrolet Camaro</th>
+          
+              <td>1254 lts</td>
+          
+              <td>1582 lts</td>
+          
+              <td>685 lts</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Lamborghini Aventator</th>
+          
+              <td>1854 lts</td>
+          
+              <td>1978 lts</td>
+          
+              <td>1502 lts</td>
+          
+            </tr>
+          
+        </table>
+
+        <p>--------------------------------------------------------------------------------------------------------------</p>
+
+        <h1>Unificación de celdas</h1>
+
+        <p>
+            <strong>colspan</strong> cuando el atributo es establecido en una celda, <br>
+            indica a los intérpretes que la misma debe abarcar, no solamente su propio espacio, <br>
+            sino también el espacio de un número de celdas contiguas hacia su derecha.
+        </p>
+
+        <table class="default">
+
+            <tr>
+          
+              <th></th>
+          
+              <th>Día 1</th>
+          
+              <th>Día 2</th>
+          
+              <th>Día 3</th>
+          
+              <th>Día 4</th>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Mike (lastimado)</th>
+          
+              <td colspan="3">0 km</td>
+          
+              <td>4 km</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Susan</th>
+          
+              <td>23 km</td>
+          
+              <td>18 km</td>
+          
+              <td>19 km</td>
+          
+              <td>15 km</td>
+          
+            </tr>
+          
+        </table>
+
+        <p>
+            <strong>rowspan</strong> cuando el atributo es establecido en una celda, <br>
+            indica a los intérpretes que la misma debe abarcar, no solamente su propio espacio, <br>
+            sino también el espacio de un número de celdas contiguas hacia abajo.
+        </p>
+
+        <table class="default">
+
+            <tr>
+          
+              <th></th>
+          
+              <th>Básico</th>
+          
+              <th>Completo</th>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Instalación</th>
+          
+              <td rowspan="2">Gratis!</td>
+          
+              <td>$49.99</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Primer año</th>
+          
+              <td>$19.99</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Segundo año</th>
+          
+              <td>$9.99</td>
+          
+              <td>$29.99</td>
+          
+            </tr>
+          
+        </table>
+
+        <p>--------------------------------------------------------------------------------------------------------------</p>
+
+        <h1>Agrupación de filas</h1>
+
+        <p>
+            <strong>thead</strong> agrupa las filas que presentan infromación de encabezado.
+        </p>
+
+        <p>
+            <strong>tfoot</strong> contiene a las filas que representan un pie o resumen.
+        </p>
+
+        <p>
+            <strong>tbody</strong> representan un bloque de filas que consiste en un cuerpo de datos.
+        </p>
+
+        <table class="default">
+
+            <thead>
+          
+              <tr>
+          
+                <th></th>
+          
+                <th colspan="2">Anthony</th>
+          
+                <th colspan="2">Lione</th>
+          
+              </tr>
+          
+              <tr>
+          
+                <th scope="col">Fecha</th>
+          
+                <th>Entrada</th>
+          
+                <th>Salida</th>
+          
+                <th>Entrada</th>
+          
+                <th>Salida</th>
+          
+              </tr>
+          
+            </thead>
+          
+            <tbody>
+          
+              <tr>
+          
+                <th>15/07</th>
+          
+                <td>$200,00</td>
+          
+                <td>$50,00</td>
+          
+                <td>$0</td>
+          
+                <td>$0</td>
+          
+              </tr>
+          
+              <tr>
+          
+                <th>28/07</th>
+          
+                <td>$0,00</td>
+          
+                <td>$100,00</td>
+          
+                <td>$100,00</td>
+          
+                <td>$0,00</td>
+          
+              </tr>
+          
+              <tr>
+          
+                <th>09/08</th>
+          
+                <td>$0,00</td>
+          
+                <td>$50,00</td>
+          
+                <td>$0,00</td>
+          
+                <td>$80,00</td>
+          
+              </tr>
+          
+              <tr>
+          
+                <th>22/08</th>
+          
+                <td>$40,00</td>
+          
+                <td>$0,00</td>
+          
+                <td>$0,00</td>
+          
+                <td>$110,00</td>
+          
+              </tr>
+          
+              <tr>
+          
+                <th>25/08</th>
+          
+                <td>$0,00</td>
+          
+                <td>$20,00</td>
+          
+                <td>$0,00</td>
+          
+                <td>$0,00</td>
+          
+              </tr>
+          
+            </tbody>
+          
+            <tfoot>
+          
+              <tr>
+          
+                <th>Balance</th>
+          
+                <td colspan="2">$20,00</td>
+          
+                <td colspan="2">$10,00</td>
+          
+              </tr>
+          
+            </tfoot>
+          
+        </table>
+
+        <p>--------------------------------------------------------------------------------------------------------------</p>
+
+        <h1>Agrupación de Columnas</h1>
+
+        <p>
+            <strong>colgroup</strong> se puede utilizar para agrupar columnas si se refieren a un mismo producto <br>
+            o si representan una misma magnitud, pero no debe ser usado simplemente para hacer que tengan el mismo aspecto 
+        </p>
+
+        <p>
+            La grupos de columnas se declaran de izquierda a derecha, <br>
+            de modo que el primer grupo contendrá a la primera columna de la tabla <br>
+             más un número de de columnas consecutivas según lo defina su atributo span.
+        </p>
+
+        <table class="default">
+
+            <colgroup>
+          
+            <colgroup span="2" style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+          
+            <colgroup span="2" style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+          
+            <tr>
+          
+              <th></th>
+          
+              <th colspan="2">Mike</th>
+          
+              <th colspan="2">Tara</th>
+          
+            </tr>
+          
+            <tr>
+          
+              <th></th>
+          
+              <th>Primera prueba</th>
+          
+              <th>Segunda prueba</th>
+          
+              <th>Primera prueba</th>
+          
+              <th>Segunda prueba</th>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Día 1</th>
+          
+              <td>25 km</td>
+          
+              <td>38 km</td>
+          
+              <td>28 km</td>
+          
+              <td>37 km</td>
+          
+            </tr>
+          
+            <tr>
+          
+              <th>Día 2</th>
+          
+              <td>22 km</td>
+          
+              <td>35 km</td>
+          
+              <td>30 km</td>
+          
+              <td>35 km</td>
+          
+            </tr>
+          
+          </table>
+          
     </div>
 </body>
 </html>
