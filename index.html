@@ -15,64 +15,230 @@
     <!-- https://dev.to/sapardo/etiquetas-semanticas-de-html5-3j7m#:~:text=Las%20etiquetas%20sem%C3%A1nticas%20ayudan%20a%20la%20implementaci%C3%B3n%20de,ser%20indexada%20por%20los%20buscadores%20web%20como%20Google. -->
    
     <!-- https://www.htmlquick.com/es/tutorials/tables/5.html -->
+
+    <!-- https://www.eniun.com/atributos-propiedades-fuentes-css/#:~:text=Propiedades%20de%20las%20fuentes%20Las%20propiedades%20CSS%20de,muestran%20las%20propiedades%20de%20las%20fuentes%20m%C3%A1s%20destacadas. -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
-        <h1>Propiedades de fuentes css</h1>
+        <h1>Propiedades de imagen css</h1>
+
+        <h3>Background Image</h3>
 
         <p>
-            Las propiedades CSS de las fuentes son las que permiten controlar el tamaño, 
-            el tipo, 
-            el grosor o el estilo de las letras, 
-            entre otras cosas.
+            Usando esta propiedad, podemos añadir imágenes a lo largo de nuestra hoja de estilos. <br>
+            Podemos usar bakbroung-image de dos maneras:<br><br>
+
+           -- Con el path del directorio local.<br>
+           -- Especificando la URl de la imagen.
         </p>
 
-        <img src="fuentes-css.png" alt="">
+        <p>
+            <strong>¿Comó usar background-image a través del directorio?</strong> <br>
+            Aquí tenemos la sintaxis para background-image cuando usamos el directorio 👇.
 
-        <h1>Font Family</h1>
+            <p>---------------------------</p>
+            // Coloca la ruta dentro de las comillas simples <br>
+            .container{ <br>
+            background-image  :  url(' ');<br>
+            }
+            <p>---------------------------</p>
+}
+        </p>
 
-        <h3>Propiedad font-family</h3>
-        <p class="a">Texto con propiedad font-family: "Times New Roman", Times, serif; </p>
-        <p class="b">Texto con propiedad font-family: Arial, Helvetica, sans-serif;</p>
+        <p>
+            <strong>background-image: url(directory path)?</strong> <br>
+            Hay tres casos donde necesitamos especificar la ruta de la imagen en nuestro CSS: <br><br>
+
+            1. Cuando la imagen y style.css están en la misma carpeta. <br>
+            2. Cuando la imagen está en la siguiente carpeta. <br>
+            3. Cuando la imagen está en la carpeta anterior. <br><br>
+            Cuando la imagen y style.css están en la misma carpeta, se va ver de la siguiente manera. <br><br>
+
+            Observa que kitty.png y style.cssestán en la misma carpeta padre llamada BACKGROUND-PROJECT:
+        </p>
+
+        <img src="mismo-directorio.png" alt="">
 
         <p>--------------------------------------------------------------------------------------------------------------------------------</p>
         
-        <h1>Font Style</h1>
+        <h3>Background Size</h3>
 
-        <h3>Propiedad font-style</h3>
-        <p class="a">Párrrafo con estilo normal </p>
-        <p class="b">Párrafo en italic</p>
-        <p class="c">Párrrafo en oblique</p>
+        <p>
+            Podemos ajustar el tamaño de una imagen usando la propiedad background-size. <br><br>
+
+            Podemos usar background-size de 3 maneras: <br><br>
+
+            1. Usar los valores cover/contain <br>
+            2. Establecer el alto y ancho de la imagen <br>
+            3. usar auto
+
+            Podemos escribir la sintaxis luego de escribir el nombre del selector, igual a <br><br>
+
+            // Podremos escribir aquí <br>
+            .container{<br>
+            background-size  : cover;<br>
+            }
+        </p>
+
+        <h5>Cover</h5>
+
+        <p>
+            Cuando usamos esta propiedad, estirará la imagen a toda la pantalla incluso cuando cambiamos el tamaño de la ventana. <br>
+        </p>
+
+        <h5>Contain</h5>
+
+        <p>
+            Este valor conservará el tamaño de la imagen [Responsive Image] incluso cuando cambiamos el tamaño de la ventana.
+        </p>
 
         <p>--------------------------------------------------------------------------------------------------------------------------------</p>
 
-        <h1>Font Variant</h1>
+        <h3>Background Repeat</h3>
 
-        <h3>Propiedad font-variant</h3>
-        <p class="a">Párrrafo con estilo normal </p>
-        <p class="b">Párrafo con estilo small-caps</p>
-        <h2 class="b">Cabecera con estilo small-caps</h2>
+        <p>
+            Esta propiedad nos permite repetir la imagen múltiples veces. <br>
+            Esta propiedad tiene seis valores posibles:<br><br>
+
+            1. repeat<br>
+            2. repeat-x<br>
+            3. repeat-y<br>
+            4. no repeat<br>
+            5. space<br>
+            6. round
+        </p>
+
+        <h5>repeat</h5>
+
+        <p>
+            Usando este valor, podemos repetir la misma imagen múltiples veces a lo largo de los ejes X y Y tanto como el tamaño de la pantalla lo permita.
+        </p>
+
+        <img src="repeat.png" alt="">
+
+        <h5>repeat-x</h5>
+
+        <p>
+            Este valor nos permite repetir la misma imagen múltiples veces a lo largo del eje x tanto como el tamaño de la pantalla lo permita.
+        </p>
+
+        <img src="repeat-x.png" alt="">
+
+        <h5>repeat-y</h5>
+
+        <p>
+            Este valor nos permite repetir la misma imagen múltiples veces a lo largo del eje y tanto como el tamaño de la pantalla lo permita.
+        </p>
+
+        <img src="repeat-y.png" alt="">
+
+        <h5>no-repeat</h5>
+
+        <p>
+            Podemos tener el tamaño original de nuestra imagen sin repeticiones usando este valor. 
+        </p>
+
+        <img src="no-repeat.png" alt="">
+
+        <h5>valor space</h5>
+
+        <p>
+            Trabaja con los ejes X y Y. <br>
+            Podemos ver la principal diferencia en los espacios cuando cambiamos el tamaño de la ventana.
+        </p>
+
+        <h5>valor around</h5>
+
+        <p>
+            Esto funciona tanto para el eje x como el eje y.  <br>
+            La imagen es expandida cuando nosotros cambiamos el tamaño de la pantalla.
+        </p>
 
         <p>--------------------------------------------------------------------------------------------------------------------------------</p>
 
-        <h1>Font Weight</h1>
+        <h3>Background position</h3>
 
-        <h3>Propiedad font-weight</h3>
-        <p class="a">Párrrafo con estilo normal </p>
-        <p class="b">Párrafo en negrita</p>
-        <p class="c">Párrrafo en negrita</p>
+        <p>
+            Esta propiedad es usada para cambiar la posición de la imagen en la pantalla. <br>
+            Podemos usar una combinación de estos valores: <br><br>
+
+            1. top <br>
+            2. left<br>
+            3. right<br>
+            4. bottom<br>
+            5. percentage values
+        </p>
 
         <p>--------------------------------------------------------------------------------------------------------------------------------</p>
 
-        <h1>Font Size</h1>
+        <h3>Background origin</h3>
 
-        <h3>Propiedad font-size</h3>
-        <p class="a">Párrrafo con font-size: 20px </p>
-        <p class="b">Párrafo con font-size: 2em</p>
-        <p class="c">Párrrafo con font-size: xx-small </p>
-        <p class="d">Párrafo con font-size: small</p>
-        <p class="e">Párrafo con font-size: 250%</p>
+        <p>
+            Esta propiedad nos permite establecer el origen de nuestra imagen a través del CSS box model. <br>
+            Tiene cuatro posibles valores:<br><br>
+
+            1. border-box<br>
+            2. padding-box<br>
+            3. content-box<br>
+            4. inherit<br><br>
+
+            En el standard CSS box model, la parte exterior es border. <br>
+            entonces luego tenemos el padding y finalmente tenemos el content en el centro.
+        </p>
+
+        <img src="box-model.png" alt="">
+
+        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
+
+        <h3>Background clip</h3>
+
+        <p>
+            Esta propiedad es igual a background-origin. <br>
+            Pero la principal diferencia es que background-clip CORTA la imagen para que quepa dentro del cuadro <br>
+            mientras background-origin EMPUJA el contenido dentro del cuadro para que quepa. <br><br>
+
+            Tiene cuatro valores posibles: <br><br>
+
+            1. border-box <br>
+            2. padding-box<br>
+            3. content-box<br>
+            4. inherit
+        </p>
+
+        <img src="clip.png" alt="">
+
+        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
+
+        <h3>Background attachment</h3>
+
+        <p>
+            Esta propiedad nos permite manejar el comportamiento de nuestro contenido e imagen cuando hacemos scroll. <br>
+
+            Hay tres valores posibles: <br><br>
+
+            1. scroll <br>
+            2. fixed<br>
+            3. local<br><br>
+
+            Cuando usamos scroll la imagen se fija y podemos desplazarnos libremente por nuestro contenido.<br> 
+            El valor fijo nos da un efecto de paralaje en el desplazamiento del mouse y produce múltiples imágenes siempre que nuestro contenido no termine.
+        </p>
+
+        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
+
+        <h3>Background color</h3>
+
+        <p>
+            Podemos usar esta propiedad para establecer el background con color.<br>
+
+            Existen muchas opciones pero las más populares son: <br><br>
+            1. Color sólido usando nombre o el valor hexadecimal<br>
+            2. Usando la función RGB()<br>
+            3. Usando la función `linear-gradient()``
+        </p>
+
+        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
 
     </div>
 </body>
