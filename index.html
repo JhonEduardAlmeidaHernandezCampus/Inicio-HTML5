@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio HTML5</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+
     <!-- https://tutorialehtml.com/es/tutoriales-html-parrafos/ -->
 
     <!-- https://keepcoding.io/blog/etiquetas-insertar-elementos-multimedia-html/ -->
@@ -20,226 +24,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1>Propiedades de imagen css</h1>
+    <div class="centro">
+        <h1>Skill</h1>
 
-        <h3>Background Image</h3>
+        <table class="tabla-centro">
 
-        <p>
-            Usando esta propiedad, podemos añadir imágenes a lo largo de nuestra hoja de estilos. <br>
-            Podemos usar bakbroung-image de dos maneras:<br><br>
+            <thead>
 
-           -- Con el path del directorio local.<br>
-           -- Especificando la URl de la imagen.
-        </p>
+                <th></th>
+                <th colspan="13">Jhon Hernandez</th>
 
-        <p>
-            <strong>¿Comó usar background-image a través del directorio?</strong> <br>
-            Aquí tenemos la sintaxis para background-image cuando usamos el directorio 👇.
+            </thead>
 
-            <p>---------------------------</p>
-            // Coloca la ruta dentro de las comillas simples <br>
-            .container{ <br>
-            background-image  :  url(' ');<br>
-            }
-            <p>---------------------------</p>
-}
-        </p>
+            <tbody>
 
-        <p>
-            <strong>background-image: url(directory path)?</strong> <br>
-            Hay tres casos donde necesitamos especificar la ruta de la imagen en nuestro CSS: <br><br>
+                <tr>
 
-            1. Cuando la imagen y style.css están en la misma carpeta. <br>
-            2. Cuando la imagen está en la siguiente carpeta. <br>
-            3. Cuando la imagen está en la carpeta anterior. <br><br>
-            Cuando la imagen y style.css están en la misma carpeta, se va ver de la siguiente manera. <br><br>
+                    <td style="font-family: 'Sassy Frass', cursive;"> <strong>Skill's</strong></td>
+                    <td>Capacidad <br> de <br> aprendizaje</td>
+                    <td>Creativo</td>
+                    <td>Resolver <br> conﬂictos <br> y <br> problemas </td>
+                    <td>Proactivo</td>
+                    <td>Responsable</td>
+                    <td> Adaptación <br> al <br> cambio </td>
+                    <td>Conocimientos <br> en <br> diseño <br> web</td>
+                    <td>Persuasivo</td>
+                    
+                </tr>
 
-            Observa que kitty.png y style.cssestán en la misma carpeta padre llamada BACKGROUND-PROJECT:
-        </p>
+            </tbody>
 
-        <img src="mismo-directorio.png" alt="">
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
+        </table>
         
-        <h3>Background Size</h3>
-
-        <p>
-            Podemos ajustar el tamaño de una imagen usando la propiedad background-size. <br><br>
-
-            Podemos usar background-size de 3 maneras: <br><br>
-
-            1. Usar los valores cover/contain <br>
-            2. Establecer el alto y ancho de la imagen <br>
-            3. usar auto
-
-            Podemos escribir la sintaxis luego de escribir el nombre del selector, igual a <br><br>
-
-            // Podremos escribir aquí <br>
-            .container{<br>
-            background-size  : cover;<br>
-            }
-        </p>
-
-        <h5>Cover</h5>
-
-        <p>
-            Cuando usamos esta propiedad, estirará la imagen a toda la pantalla incluso cuando cambiamos el tamaño de la ventana. <br>
-        </p>
-
-        <h5>Contain</h5>
-
-        <p>
-            Este valor conservará el tamaño de la imagen [Responsive Image] incluso cuando cambiamos el tamaño de la ventana.
-        </p>
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
-        <h3>Background Repeat</h3>
-
-        <p>
-            Esta propiedad nos permite repetir la imagen múltiples veces. <br>
-            Esta propiedad tiene seis valores posibles:<br><br>
-
-            1. repeat<br>
-            2. repeat-x<br>
-            3. repeat-y<br>
-            4. no repeat<br>
-            5. space<br>
-            6. round
-        </p>
-
-        <h5>repeat</h5>
-
-        <p>
-            Usando este valor, podemos repetir la misma imagen múltiples veces a lo largo de los ejes X y Y tanto como el tamaño de la pantalla lo permita.
-        </p>
-
-        <img src="repeat.png" alt="">
-
-        <h5>repeat-x</h5>
-
-        <p>
-            Este valor nos permite repetir la misma imagen múltiples veces a lo largo del eje x tanto como el tamaño de la pantalla lo permita.
-        </p>
-
-        <img src="repeat-x.png" alt="">
-
-        <h5>repeat-y</h5>
-
-        <p>
-            Este valor nos permite repetir la misma imagen múltiples veces a lo largo del eje y tanto como el tamaño de la pantalla lo permita.
-        </p>
-
-        <img src="repeat-y.png" alt="">
-
-        <h5>no-repeat</h5>
-
-        <p>
-            Podemos tener el tamaño original de nuestra imagen sin repeticiones usando este valor. 
-        </p>
-
-        <img src="no-repeat.png" alt="">
-
-        <h5>valor space</h5>
-
-        <p>
-            Trabaja con los ejes X y Y. <br>
-            Podemos ver la principal diferencia en los espacios cuando cambiamos el tamaño de la ventana.
-        </p>
-
-        <h5>valor around</h5>
-
-        <p>
-            Esto funciona tanto para el eje x como el eje y.  <br>
-            La imagen es expandida cuando nosotros cambiamos el tamaño de la pantalla.
-        </p>
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
-        <h3>Background position</h3>
-
-        <p>
-            Esta propiedad es usada para cambiar la posición de la imagen en la pantalla. <br>
-            Podemos usar una combinación de estos valores: <br><br>
-
-            1. top <br>
-            2. left<br>
-            3. right<br>
-            4. bottom<br>
-            5. percentage values
-        </p>
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
-        <h3>Background origin</h3>
-
-        <p>
-            Esta propiedad nos permite establecer el origen de nuestra imagen a través del CSS box model. <br>
-            Tiene cuatro posibles valores:<br><br>
-
-            1. border-box<br>
-            2. padding-box<br>
-            3. content-box<br>
-            4. inherit<br><br>
-
-            En el standard CSS box model, la parte exterior es border. <br>
-            entonces luego tenemos el padding y finalmente tenemos el content en el centro.
-        </p>
-
-        <img src="box-model.png" alt="">
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
-        <h3>Background clip</h3>
-
-        <p>
-            Esta propiedad es igual a background-origin. <br>
-            Pero la principal diferencia es que background-clip CORTA la imagen para que quepa dentro del cuadro <br>
-            mientras background-origin EMPUJA el contenido dentro del cuadro para que quepa. <br><br>
-
-            Tiene cuatro valores posibles: <br><br>
-
-            1. border-box <br>
-            2. padding-box<br>
-            3. content-box<br>
-            4. inherit
-        </p>
-
-        <img src="clip.png" alt="">
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
-        <h3>Background attachment</h3>
-
-        <p>
-            Esta propiedad nos permite manejar el comportamiento de nuestro contenido e imagen cuando hacemos scroll. <br>
-
-            Hay tres valores posibles: <br><br>
-
-            1. scroll <br>
-            2. fixed<br>
-            3. local<br><br>
-
-            Cuando usamos scroll la imagen se fija y podemos desplazarnos libremente por nuestro contenido.<br> 
-            El valor fijo nos da un efecto de paralaje en el desplazamiento del mouse y produce múltiples imágenes siempre que nuestro contenido no termine.
-        </p>
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
-        <h3>Background color</h3>
-
-        <p>
-            Podemos usar esta propiedad para establecer el background con color.<br>
-
-            Existen muchas opciones pero las más populares son: <br><br>
-            1. Color sólido usando nombre o el valor hexadecimal<br>
-            2. Usando la función RGB()<br>
-            3. Usando la función `linear-gradient()``
-        </p>
-
-        <p>--------------------------------------------------------------------------------------------------------------------------------</p>
-
     </div>
 </body>
 </html>

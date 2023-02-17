@@ -39,3 +39,33 @@ body{
 .c  { font-size: xx-small; }
 .d  { font-size: small; }
 .e  { font-size: 250%; }
+
+/* ---------------- */
+
+.centro{
+    text-align: center;
+}
+
+.tabla-centro{
+    border: 1px solid rgb(207, 193, 193);
+    border-radius: 1%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(227, 227, 243);
+    padding: 10px;
+}
+
+.tabla-centro th{
+    font-family: 'Sassy Frass', cursive;
+    border: 1px solid rgb(207, 193, 193);
+    font-size: 160%;
+    background-color: rgb(239, 228, 228);
+    padding: 10px 0px;
+}
+
+.tabla-centro td{
+    border: 1px solid rgb(207, 193, 193);
+    font-size: 120%;
+    background-color: rgb(198, 201, 198);
+    padding: 40px 10px;
+}
