@@ -19,3 +19,23 @@ body{
     background: rgba(0,102,255,.25);
     text-align: center;
 }
+
+.a  { font-family: "Times New Roman", Times, serif; }
+.b  { font-family: Arial, Helvetica, sans-serif; }
+
+.a  { font-style: normal; }
+.b  { font-style: italic; }
+.c  { font-style: oblique; }
+
+.a  { font-variant: normal; }
+.b  { font-variant: small-caps; }
+
+.a  { font-weight: normal; }
+.b  { font-weight: bold; }
+.c  { font-weight: 600; }
+
+.a  { font-size: 20px; }
+.b  { font-size: 2em; }
+.c  { font-size: xx-small; }
+.d  { font-size: small; }
+.e  { font-size: 250%; }
