@@ -24,38 +24,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="centro">
-        <h1>Skill</h1>
-
-        <table class="tabla-centro">
-
-            <thead>
-
-                <th></th>
-                <th colspan="13">Jhon Hernandez</th>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-
-                    <td style="font-family: 'Sassy Frass', cursive;"> <strong>Skill's</strong></td>
-                    <td>Capacidad <br> de <br> aprendizaje</td>
-                    <td>Creativo</td>
-                    <td>Resolver <br> conﬂictos <br> y <br> problemas </td>
-                    <td>Proactivo</td>
-                    <td>Responsable</td>
-                    <td> Adaptación <br> al <br> cambio </td>
-                    <td>Conocimientos <br> en <br> diseño <br> web</td>
-                    <td>Persuasivo</td>
-                    
-                </tr>
-
-            </tbody>
-
-        </table>
+    <div>
         
+        <h1>Object Fit</h1>
+
+        <p>
+            La propiedad CSS object-fit indica cómo el contenido de un elemento reemplazado, <br>
+            por ejemplo un "img" o "video", <br>
+            debería redimensionarse para ajustarse a su contenedor.<br>
+
+            Se puede alterar la alineación del contenido del elemento reemplazado utilizando la propiedad object-position.
+        </p>
+
+        <h2>
+            Valores
+        </h2>
+        
+        <p>
+            <strong>Contain</strong> <br> El contenido reemplazado está dimensionado para mantener su relación de aspecto mientras<br>
+            se ajusta dentro del cuadro de contenido del elemento: <br>
+            su tamaño de objeto concreto se resuelve como una restricción de contenido contra el ancho y la altura utilizados del elemento.
+        </p>
+
+        <p>
+            <strong>Cover</strong> <br> El contenido reemplazado se dimensiona para mantener<br>
+            su relación de aspecto mientras llena el cuadro de contenido completo del elemento. <br>
+            Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, <br>
+            entonces el objeto se recortará para que se ajuste.
+        </p>
+
+        <p>
+            <strong>Fill</strong> <br> Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. <br>
+            El objeto completo ocupará todo el espacio de la caja. <br>
+            Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo.
+        </p>
+
+        <p>
+            <strong>None</strong> <br> El contenido reemplazado no se redimensiona.
+        </p>
+
+        <p>
+            <strong>Scale-down</strong> <br> El contenido se dimensiona como si none o contain estuvieran especificados, 
+            lo que resultaría en un tamaño de objeto concreto más pequeño.
+        </p>
+
+        <h3>
+            Ejemplo:
+        </h3>
+
+        <section>
+            <h2>object-fit: fill</h2>
+            <img class="fill" src="screen-0.webp" alt="MDN Logo">
+          
+            <img class="fill narrow" src="screen-0.webp" alt="MDN Logo">
+          
+            <h2>object-fit: contain</h2>
+            <img class="contain" src="screen-0.webp" alt="MDN Logo">
+          
+            <img class="contain narrow" src="screen-0.webp" alt="MDN Logo">
+          
+            <h2>object-fit: cover</h2>
+            <img class="cover" src="screen-0.webp" alt="MDN Logo">
+          
+            <img class="cover narrow" src="screen-0.webp" alt="MDN Logo">
+          
+            <h2>object-fit: none</h2>
+            <img class="none" src="screen-0.webp" alt="MDN Logo">
+          
+            <img class="none narrow" src="screen-0.webp" alt="MDN Logo">
+          
+            <h2>object-fit: scale-down</h2>
+            <img class="scale-down" src="screen-0.webp" alt="MDN Logo">
+          
+            <img class="scale-down narrow" src="screen-0.webp" alt="MDN Logo">
+          </section>
+          
     </div>
 </body>
 </html>
